@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/hydrostat/hydroDataBR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hydrostat/hydroDataBR/actions/workflows/R-CMD-check.yaml)
-[![GitHub release](https://img.shields.io/github/v/release/hydrostat/hydroDataBR)](https://github.com/hydrostat/hydroDataBR/releases)
+[![GitHub release](https://img.shields.io/github/v/release/hydrostat/hydroDataBR?label=release&cacheSeconds=60)](https://github.com/hydrostat/hydroDataBR/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 <!-- badges: end -->
 
@@ -160,4 +160,6 @@ write_hydro_data
 
 ## Licença
 
-Consulte o campo `License` em `DESCRIPTION` e os arquivos de licença do repositório.
+Este projeto é distribuído sob a licença MIT. Consulte [`LICENSE.md`](LICENSE.md).
+
+O arquivo `LICENSE` é mantido no formato esperado por pacotes R com `License: MIT + file LICENSE`.
