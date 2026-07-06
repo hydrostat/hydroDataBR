@@ -1,0 +1,42 @@
+Package: hydroDataBR
+Type: Package
+Title: Aquisição, Padronização e Análise de Dados Hidrológicos Brasileiros
+Version: 1.0.0
+Authors@R: person(
+    given = "Wilson",
+    family = "Fernandes",
+    role = c("aut", "cre"),
+    email = "wilson@ehr.ufmg.br")
+URL: https://github.com/hydrostat/hydroDataBR
+BugReports: https://github.com/hydrostat/hydroDataBR/issues
+Description: Lê, obtém, padroniza, analisa, visualiza e exporta dados hidrológicos da Agência
+    Nacional de Águas e Saneamento Básico (ANA). O pacote oferece uma interface
+    enxuta para ler arquivos locais do HidroWeb, XML legado e JSON da ANA,
+    consultar rotas autenticadas do HidroWebService, organizar séries diárias de
+    vazão, cota e chuva em um contrato comum, calcular estatísticas,
+    disponibilidade, curvas de permanência, extremos, índices pluviométricos e
+    diagnósticos hidrométricos, gerar gráficos e tabelas e exportar resultados.
+    Inclui um banco interno com inventário de estações, medições de descarga,
+    curvas-chave e metadados de seções transversais obtidos da ANA em junho de
+    2026. Esse banco é uma fotografia estática: informações consultadas online
+    podem mudar ao longo do tempo e dependem da disponibilidade dos serviços
+    externos e das credenciais do usuário.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 4.1.0)
+Imports:
+    dplyr,
+    ggplot2,
+    httr2,
+    jsonlite,
+    scales,
+    tibble,
+    xml2
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+LazyData: true
+LazyDataCompression: xz
+Config/roxygen2/version: 8.0.0

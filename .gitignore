@@ -1,0 +1,36 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.httr-oauth
+.Renviron
+*.Rcheck/
+*.tar.gz
+.DS_Store
+Thumbs.db
+
+# Never commit local credentials, tokens, logs, caches, or downloaded raw data
+config/*token*
+config/*credential*
+logs/
+cache/
+*.log
+
+tmp/
+temp/
+outputs/
+reports/
+dev/
+data-raw/
+*.duckdb
+*.sqlite
+*.parquet
+*.rds
+*.RData
+dev/publication/*.csv
+dev/publication/*.md
+
+# Backup files
+*.bak
+*.bak_*
+*.bak_stage*
