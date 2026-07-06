@@ -1,6 +1,9 @@
 # hydroDataBR
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/hydrostat/hydroDataBR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hydrostat/hydroDataBR/actions/workflows/R-CMD-check.yaml)
+[![GitHub release](https://img.shields.io/github/v/release/hydrostat/hydroDataBR)](https://github.com/hydrostat/hydroDataBR/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 <!-- badges: end -->
 
 `hydroDataBR` é um pacote R para obter, padronizar, analisar, visualizar e exportar dados hidrológicos da Agência Nacional de Águas e Saneamento Básico (ANA), com foco em séries diárias, produtos fluviométricos e fluxos de trabalho reprodutíveis em R.

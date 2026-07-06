@@ -31,3 +31,5 @@
 ^docs$
 ^\.lintr$
 ^\.gitignore$
+
+^LICENSE\.md$
