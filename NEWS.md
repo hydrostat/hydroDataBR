@@ -1,11 +1,10 @@
-# hydroDataBR 1.0.0
+# hydroDataBR 1.1.0
 
-## Primeira versão pública
+## Novo recurso
 
-- Publicação inicial do pacote `hydroDataBR` no GitHub.
-- API pública com 15 funções exportadas.
-- Leitores locais para arquivos ANA/HidroWeb.
-- Aquisição de dados ANA por rotas autenticadas quando credenciais forem fornecidas pelo usuário.
-- Banco interno ANA estático com inventário de estações e referências hidrométricas obtidas em junho de 2026.
-- Funções para análise, diagnóstico, gráficos, tabelas e exportação de dados hidrológicos.
-- Testes e exemplos sem dependência de credenciais ANA ou serviços vivos.
+- Adiciona `download_ana_cross_section_vertices()` para baixar opcionalmente
+  os vértices completos de seções transversais hospedados no próprio
+  repositório GitHub do pacote.
+- O arquivo de vértices permanece fora do pacote instalado e é reutilizado a
+  partir do cache local do usuário.
+- A nova função não consulta serviços vivos da ANA e não exige credenciais.

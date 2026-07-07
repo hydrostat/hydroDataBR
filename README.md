@@ -138,6 +138,18 @@ if (FALSE) {
 
 Chamadas de exemplo, testes e checks do pacote não dependem de credenciais nem de serviços online da ANA.
 
+## Dados opcionais
+
+Os vértices completos de seções transversais não são instalados com o pacote
+principal, mas estão disponíveis como dado opcional no repositório GitHub.
+
+```r
+if (FALSE) {
+  vertices <- download_ana_cross_section_vertices()
+  head(vertices)
+}
+```
+
 ## API pública
 
 ```text
@@ -154,6 +166,7 @@ read_ana_json
 read_ana_xml
 read_hidroweb
 read_hidroweb_cross_sections
+download_ana_cross_section_vertices
 table_hydro_data
 write_hydro_data
 ```
