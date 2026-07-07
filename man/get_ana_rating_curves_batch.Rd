@@ -30,3 +30,4 @@ Uma lista com \code{data} e \code{request_report}.
 Consulta curvas-chave para varias estacoes e retorna os dados padronizados
 junto com um relatorio de requisicoes.
 }
+\keyword{internal}

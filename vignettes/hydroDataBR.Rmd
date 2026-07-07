@@ -1,0 +1,151 @@
+---
+title: "Introdução ao hydroDataBR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introdução ao hydroDataBR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introdução
+
+O `hydroDataBR` é um pacote R para obter, padronizar, analisar, visualizar
+e exportar dados hidrológicos da Agência Nacional de Águas e Saneamento
+Básico (ANA), com foco em séries diárias, produtos fluviométricos e fluxos de
+trabalho reprodutíveis.
+
+A API pública é intencionalmente enxuta. A aquisição de dados ANA é
+centralizada em `get_ana_data()` e `get_ana_data_batch()`. As etapas de
+análise, gráficos, tabelas e exportação usam funções fonte-neutras:
+
+```{r, eval = FALSE}
+analyze_hydro_data()
+plot_hydro_data()
+table_hydro_data()
+write_hydro_data()
+```
+
+# Banco interno ANA
+
+O pacote inclui um retrato estático de dados da ANA obtido em junho de 2026.
+Esse banco interno é útil para consultas rápidas, exemplos e diagnósticos
+offline, mas não substitui os serviços online da ANA.
+
+```{r}
+library(hydroDataBR)
+
+stations <- filter_ana_stations(
+  station_type = "fluviometric"
+)
+
+if ("discharge_start_date" %in% names(stations)) {
+  stations <- stations[!is.na(stations$discharge_start_date), ]
+}
+
+head(stations)
+```
+
+Os dados online atuais podem divergir do retrato incluído no pacote.
+
+# Contrato de série diária
+
+As funções de leitura e aquisição convergem para uma estrutura padronizada de
+série diária. As colunas principais são:
+
+```text
+station_code
+date
+variable
+value
+unit
+consistency_level
+source_status
+source
+```
+
+O exemplo abaixo cria uma série diária pequena, apenas para demonstrar o fluxo
+de análise, gráfico e tabela sem depender de serviços online.
+
+```{r}
+daily <- data.frame(
+  station_code = "00000000",
+  date = seq.Date(as.Date("2000-01-01"), as.Date("2000-12-31"), by = "day"),
+  variable = "discharge",
+  value = 50 + sin(seq_len(366) / 20) * 10,
+  unit = "m3/s",
+  consistency_level = 1L,
+  source_status = NA_character_,
+  source = "example"
+)
+
+head(daily)
+```
+
+# Análise
+
+```{r}
+stats <- analyze_hydro_data(daily, analysis = "daily_statistics")
+availability <- analyze_hydro_data(daily, analysis = "daily_availability")
+
+stats
+head(availability)
+```
+
+# Gráficos
+
+As funções de gráfico retornam objetos `ggplot`, que podem ser modificados com
+camadas usuais do `ggplot2`.
+
+```{r, fig.width = 7, fig.height = 4}
+plot_hydro_data(daily, plot = "daily_series")
+```
+
+# Tabelas
+
+```{r}
+tab <- table_hydro_data(daily, table = "daily_availability")
+head(tab)
+```
+
+# Aquisição autenticada
+
+A aquisição autenticada exige credenciais próprias do usuário junto à ANA. O
+pacote não armazena, imprime ou registra CPF/CNPJ, senha, tokens ou cabeçalhos
+sensíveis.
+
+Exemplos de aquisição autenticada não são executados automaticamente:
+
+```{r, eval = FALSE}
+token <- ana_authenticate(
+  identifier = Sys.getenv("ANA_HIDROWEBSERVICE_IDENTIFIER"),
+  password = Sys.getenv("ANA_HIDROWEBSERVICE_PASSWORD")
+)
+
+x <- get_ana_data(
+  product = "daily_discharge",
+  data_source = "api",
+  station_code = "00000000",
+  start_date = "2000-01-01",
+  end_date = "2000-12-31",
+  token = token
+)
+```
+
+# Próximos passos
+
+Depois de obter ou ler uma série diária, o fluxo recomendado é:
+
+```{r, eval = FALSE}
+dados <- get_ana_data(...)
+analise <- analyze_hydro_data(dados, analysis = "daily_statistics")
+grafico <- plot_hydro_data(dados, plot = "daily_series")
+tabela <- table_hydro_data(analise)
+write_hydro_data(tabela, path = "resultado.csv")
+```

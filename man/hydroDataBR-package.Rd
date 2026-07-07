@@ -47,6 +47,7 @@ distribuídas no banco interno do pacote principal.
 Useful links:
 \itemize{
   \item \url{https://github.com/hydrostat/hydroDataBR}
+  \item \url{https://hydrostat.github.io/hydroDataBR/}
   \item Report bugs at \url{https://github.com/hydrostat/hydroDataBR/issues}
 }
 

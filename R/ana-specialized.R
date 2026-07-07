@@ -1096,6 +1096,7 @@ ana_stage04_batch <- function(station_codes, product_fun, empty, source, ...) {
 #' @param consistency_level Nivel de consistencia solicitado ao servico, quando aplicavel.
 #'
 #' @return Uma lista com `data` e `request_report`.
+#' @keywords internal
 get_ana_discharge_measurements_batch <- function(station_codes,
                                                  token = NULL,
                                                  start_date = NULL,
@@ -1124,6 +1125,7 @@ get_ana_discharge_measurements_batch <- function(station_codes,
 #' @param consistency_level Nivel de consistencia solicitado ao servico, quando aplicavel.
 #'
 #' @return Uma lista com `data` e `request_report`.
+#' @keywords internal
 get_ana_rating_curves_batch <- function(station_codes,
                                         token = NULL,
                                         start_date = NULL,
@@ -1153,6 +1155,7 @@ get_ana_rating_curves_batch <- function(station_codes,
 #'
 #' @return Uma lista com `data` e `request_report`. O elemento `data` contem
 #' os tibbles `sections` e `vertices`.
+#' @keywords internal
 get_ana_cross_sections_batch <- function(station_codes,
                                          token = NULL,
                                          start_date = NULL,

@@ -87,7 +87,7 @@ availability <- analyze_hydro_data(daily, analysis = "daily_availability")
 
 p <- plot_hydro_data(daily, plot = "daily_series")
 
-tab <- table_hydro_data(availability, table = "daily_availability")
+tab <- table_hydro_data(daily, table = "daily_availability")
 ```
 
 As funções de gráfico retornam objetos `ggplot`, que podem ser modificados com camadas usuais do `ggplot2`.

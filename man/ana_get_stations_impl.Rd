@@ -38,3 +38,4 @@ classificacao das estacoes.
 Pelo menos um filtro deve ser informado: \code{station_code}, \code{state_code} ou
 \code{basin_code}.
 }
+\keyword{internal}

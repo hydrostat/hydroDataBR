@@ -30,3 +30,4 @@ Uma lista com \code{data} e \code{request_report}.
 Consulta medicoes de descarga liquida para varias estacoes e retorna os
 dados padronizados junto com um relatorio de requisicoes.
 }
+\keyword{internal}

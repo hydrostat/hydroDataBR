@@ -1,0 +1,52 @@
+url: https://hydrostat.github.io/hydroDataBR/
+
+template:
+  bootstrap: 5
+
+home:
+  title: hydroDataBR
+  description: >
+    Pacote R para obter, padronizar, analisar, visualizar e exportar
+    dados hidrológicos da ANA/HidroWeb no Brasil.
+
+navbar:
+  structure:
+    left: [intro, reference, articles, news]
+    right: [github]
+
+reference:
+- title: Visão geral
+  contents:
+  - hydroDataBR-package
+
+- title: Autenticação e aquisição ANA
+  contents:
+  - ana_authenticate
+  - get_ana_data
+  - get_ana_data_batch
+  - get_ana_stations
+
+- title: Leitura de arquivos locais
+  contents:
+  - read_hidroweb
+  - read_hidroweb_cross_sections
+  - read_ana_xml
+  - read_ana_json
+
+- title: Banco interno ANA
+  contents:
+  - filter_ana_stations
+  - ana_stations
+  - ana_hydrometric_database
+
+- title: Análises e diagnósticos
+  contents:
+  - analyze_hydro_data
+  - diagnose_daily_hydrometry
+  - diagnose_station_hydrometry
+
+- title: Gráficos, tabelas e exportação
+  contents:
+  - plot_hydro_data
+  - table_hydro_data
+  - write_hydro_data

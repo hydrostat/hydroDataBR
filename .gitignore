@@ -34,3 +34,5 @@ dev/publication/*.md
 *.bak
 *.bak_*
 *.bak_stage*
+docs
+inst/doc

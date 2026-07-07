@@ -7,7 +7,7 @@ Authors@R: person(
     family = "Fernandes",
     role = c("aut", "cre"),
     email = "wilson@ehr.ufmg.br")
-URL: https://github.com/hydrostat/hydroDataBR
+URL: https://github.com/hydrostat/hydroDataBR, https://hydrostat.github.io/hydroDataBR/
 BugReports: https://github.com/hydrostat/hydroDataBR/issues
 Description: Lê, obtém, padroniza, analisa, visualiza e exporta dados hidrológicos da Agência
     Nacional de Águas e Saneamento Básico (ANA). O pacote oferece uma interface
@@ -35,8 +35,12 @@ Imports:
     tibble,
     xml2
 Suggests:
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 LazyData: true
 LazyDataCompression: xz
 Config/roxygen2/version: 8.0.0
+VignetteBuilder: knitr
+Config/Needs/website: r-lib/pkgdown

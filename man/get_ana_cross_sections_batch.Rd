@@ -31,3 +31,4 @@ os tibbles \code{sections} e \code{vertices}.
 Consulta secoes transversais para varias estacoes e retorna tabelas
 padronizadas de secoes e vertices junto com um relatorio de requisicoes.
 }
+\keyword{internal}

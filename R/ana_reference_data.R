@@ -261,6 +261,7 @@ ana_compact_query <- function(query) {
 #' @param updated_to Data final de atualizacao no formato `YYYY-MM-DD`.
 #'
 #' @return Um tibble com campos padronizados de inventario de estacoes.
+#' @keywords internal
 ana_get_stations_impl <- function(token = NULL,
                              station_code = NULL,
                              state_code = NULL,
