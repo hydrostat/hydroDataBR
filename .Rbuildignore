@@ -33,3 +33,5 @@
 ^\.gitignore$
 
 ^LICENSE\.md$
+
+^data-optional$
