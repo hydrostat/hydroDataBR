@@ -7,7 +7,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/hydrostat/hydroDataBR/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/hydrostat/hydroDataBR/blob/v1.1.0/DESCRIPTION)
 
 Fernandes W (2026). *hydroDataBR: Aquisição, Padronização e Análise de
 Dados Hidrológicos Brasileiros*. R package version 1.0.0,
