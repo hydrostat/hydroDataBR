@@ -1,0 +1,9 @@
+pandoc: 3.8.3
+pkgdown: 2.2.0.9000
+pkgdown_sha: 31ec99773c993ecb75d095b2c51b91816c064683
+articles:
+  hydroDataBR: hydroDataBR.html
+last_built: 2026-07-07T17:33Z
+urls:
+  reference: https://hydrostat.github.io/hydroDataBR/reference
+  article: https://hydrostat.github.io/hydroDataBR/articles
