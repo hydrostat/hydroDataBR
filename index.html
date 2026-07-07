@@ -169,6 +169,16 @@
 <p>Chamadas de exemplo, testes e checks do pacote não dependem de credenciais nem de serviços online da ANA.</p>
 </div>
 <div class="section level2">
+<h2 id="dados-opcionais">Dados opcionais<a class="anchor" aria-label="anchor" href="#dados-opcionais"></a>
+</h2>
+<p>Os vértices completos de seções transversais não são instalados com o pacote principal, mas estão disponíveis como dado opcional no repositório GitHub.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">vertices</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/download_ana_cross_section_vertices.html">download_ana_cross_section_vertices</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">vertices</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+</div>
+<div class="section level2">
 <h2 id="api-pública">API pública<a class="anchor" aria-label="anchor" href="#api-p%C3%BAblica"></a>
 </h2>
 <pre class="text"><code><span><span class="va">ana_authenticate</span></span>
@@ -184,6 +194,7 @@
 <span><span class="va">read_ana_xml</span></span>
 <span><span class="va">read_hidroweb</span></span>
 <span><span class="va">read_hidroweb_cross_sections</span></span>
+<span><span class="va">download_ana_cross_section_vertices</span></span>
 <span><span class="va">table_hydro_data</span></span>
 <span><span class="va">write_hydro_data</span></span></code></pre>
 </div>

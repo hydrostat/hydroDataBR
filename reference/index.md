@@ -42,6 +42,11 @@
   [`ana_cross_section_summary`](https://hydrostat.github.io/hydroDataBR/reference/ana_hydrometric_database.md)
   : Banco hidrométrico interno da ANA
 
+## Dados opcionais
+
+- [`download_ana_cross_section_vertices()`](https://hydrostat.github.io/hydroDataBR/reference/download_ana_cross_section_vertices.md)
+  : Baixar vértices opcionais de seções transversais
+
 ## Análises e diagnósticos
 
 - [`analyze_hydro_data()`](https://hydrostat.github.io/hydroDataBR/reference/analyze_hydro_data.md)
