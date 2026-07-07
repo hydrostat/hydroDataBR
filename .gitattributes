@@ -12,3 +12,5 @@ NAMESPACE text eol=lf
 LICENSE text eol=lf
 *.rda binary
 *.zip binary
+
+*.rds binary
